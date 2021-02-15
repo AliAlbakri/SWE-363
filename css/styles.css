@@ -1,7 +1,64 @@
-.mealInfo{
-    list-style: none;
+@import "./detail/detail.css";
+@import "./detail/detail.css";
+
+
+body{
+    margin: 0;
+}
+.container{
+    margin: 0 10rem;
 }
 
-table, th, td {
-    border: 1px solid black;
+nav{
+    display: flex;
+    justify-content: space-between;
 }
+
+header{
+    /* Center the image */
+    /* Do not repeat the image */
+    height: 510px;
+    background: url('../Images/party.png')  center ;
+    background-size: cover;
+    width: 100%;
+    color:white;
+}
+
+
+
+nav img{
+    max-width: 7rem;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+.nav-links a{
+    padding: 15px 15px;
+    background-color: #281923;
+    opacity: 60%;
+    font-size: 1.2rem;
+    color: #dedede;
+    text-decoration: none;
+    border-right: rgba(0,0,0,.5) 1px solid;
+    transition: all 0.75s;
+
+}
+.nav-links a:hover{
+    background-color: #120c10;
+    transition: all 0.75s;
+    border-right: rgba(0,0,0,.5) 1px solid;
+}
+
+.nav-links .red-link a{
+    background-color: #A80E0E;
+    opacity: 100%;
+    border: none;
+    color: white;
+}
+
+

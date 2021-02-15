@@ -10,261 +10,270 @@
 
 
 <body>
-<header>
-    <nav>
+
+<div class="container">
+    <header>
+        <nav >
+            <img src="./Images/logo-red.svg" alt="">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#Menu">Menu</a></li>
+                <li><a href="index.html#Gallery">Gallery</a></li>
+                <li><a href="index.html#Testimonials">Testimonials</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Meal-info">
+        <img src="Images/meal1.png" alt="delivery pizza guy">
+        <br/>
+        <p id="price">24 SAR</p>
+        <p>⭐️ 4.5 rating</p>
+
+        <h1>Best Sandwich</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt laborum minima nobis quia. Adipisci dolor
+            laboriosam omnis quis suscipit totam!</p>
+
+        <div id="Description">
+            <h2>Description</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur deserunt dolore,
+                eveniet
+                excepturi explicabo laboriosam perspiciatis sunt totam velit.</p>
+        </div>
+    </section>
+
+    <section id="nutrition-facts">
+        <h4>Nutrition Facts</h4>
+
+        <table>
+            <tr>
+                <td colspan="3"><strong>Supplement Facts</strong></td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="3"><strong>Serving Size:</strong> 1 Cookie (57g)</td>
+
+            </tr>
+
+            <tr>
+                <td colspan="3"><strong>Serving Per Container:</strong> 12</td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td><strong>Amount Per Serving</strong></td>
+                <td><strong>%Daily Value*</strong></td>
+            </tr>
+
+            <tr>
+                <td>Calories</td>
+                <td>200</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Calories from Fat</td>
+                <td>70</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Total Fat</td>
+                <td>7 g</td>
+                <td>11%</td>
+            </tr>
+
+            <tr>
+                <td>Saturated Fat</td>
+                <td>4 g</td>
+                <td>20%</td>
+            </tr>
+
+            <tr>
+                <td>Trans Fat</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Cholesterol</td>
+                <td>0 g</td>
+                <td>0%</td>
+            </tr>
+
+            <tr>
+                <td>Sodium</td>
+                <td>220 g</td>
+                <td>9%</td>
+            </tr>
+
+            <tr>
+                <td>Total Carbohydrate</td>
+                <td>31 g</td>
+                <td>10%</td>
+            </tr>
+
+            <tr>
+                <td>Dietary Fiber</td>
+                <td>5g</td>
+                <td>20%</td>
+            </tr>
+
+            <tr>
+                <td>Sugars</td>
+                <td>12 g</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Sugar Alcohol</td>
+                <td>0 g</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Protein</td>
+                <td>8 g</td>
+                <td>8%</td>
+            </tr>
+
+            <tr>
+                <td>Vitamin A</td>
+                <td></td>
+                <td>0%</td>
+            </tr>
+
+            <tr>
+                <td>Vitamin C</td>
+                <td></td>
+                <td>0%</td>
+            </tr>
+
+            <tr>
+                <td>Calcium</td>
+                <td></td>
+                <td>2%</td>
+            </tr>
+
+            <tr>
+                <td>Iron</td>
+                <td></td>
+                <td>10%</td>
+            </tr>
+
+            <tr>
+
+                <td colspan="3">* Percent Daily Values are based on a 2.000 calorie dieL Your daily values may be higher
+                    or
+                    lower depending on your calorie needs
+                </td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <section id="review">
+        <h3>Reviews</h3>
+
+        <img src="Images/man-eating-burger.png" alt="man-eating-burger">
+        <h4>reviewer name</h4>
+        <h5>Dhahran-Feb08,2020 ⭐️⭐️⭐️⭐️⭐️</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ad natus officiis optio excepturi
+            dignissimos, minima quaerat, quo vitae, veritatis corrupti fugiat sed ipsam pariatur nemo harum error sunt
+            voluptatibus!</p>
+        <h4>Add your Review</h4>
+
+
+        <form method="GET" action="detail.html" enctype="multipart/form-data">
+            <div>
+                <label for="file">Image</label>
+                <input type="file" id="file" name="myFile">
+            </div>
+
+            <div>
+                <label for="rate">Rate the Food</label>
+                <input type="range" id="rate" name="rate" min="0" max="5" value="3" list="tickmarks">
+                <datalist id="tickmarks">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </datalist>
+
+            </div>
+
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="First and Last Name">
+            </div>
+            <label for="feedback">Review</label>
+            <div>
+                <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+
+
+    </section>
+
+
+    <section id="Contact">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li>phone:+966531381813
+                <br>
+                <img src="Images/clock.svg" alt="clock">
+            </li>
+
+            <li>sun-thr 11:00-23:00
+                <br>
+                fri-sat 12:00-23
+                <br>
+            </li>
+
+            <li>
+                <img src="Images/placeholder.svg" alt="placeholder">
+                <p>123 KFUPM Students Mall</p>
+                <p>Dhahran 34464</p>
+            </li>
+
+            <li>
+                <a href="">facebook</a>
+                <a href="">Twitter</a>
+                <a href="">Instagram</a>
+            </li>
+
+        </ul>
+
+        <img src="Images/map.png" alt="">
+        <img src="Images/logo-red.svg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aperiam possimus quia, in impedit
+            doloribus
+            quidem corporis animi aliquid ab delectus nam repudiandae sapiente iure asperiores eveniet repellat suscipit
+            voluptates?</p>
+    </section>
+
+    <footer id="links">
+        <h3>useful links</h3>
+        <ul>
+            <li><a href="">About</a></li>
             <li><a href="index.html#Menu">Menu</a></li>
-            <li><a href="index.html#Gallery">Gallery</a></li>
             <li><a href="index.html#Testimonials">Testimonials</a></li>
             <li><a href="#Contact">Contact Us</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Cart</a></li>
         </ul>
-    </nav>
-</header>
-
-<section id="Meal-info">
-    <img src="Images/meal1.png" alt="delivery pizza guy">
-    <br/>
-    <p id="price">24 SAR</p>
-    <p>⭐️ 4.5 rating</p>
-
-    <h1>Best Sandwich</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt laborum minima nobis quia. Adipisci dolor
-        laboriosam omnis quis suscipit totam!</p>
-
-    <div id="Description">
-        <h2>Description</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur deserunt dolore, eveniet
-            excepturi explicabo laboriosam perspiciatis sunt totam velit.</p>
-    </div>
-</section>
-
-<section id="nutrition-facts">
-    <h4>Nutrition Facts</h4>
-
-    <table>
-        <tr>
-            <td colspan="3"><strong>Supplement Facts</strong></td>
-
-        </tr>
-
-        <tr>
-
-            <td colspan="3"><strong>Serving Size:</strong> 1 Cookie (57g)</td>
-
-        </tr>
-
-        <tr>
-            <td colspan="3"><strong>Serving Per Container:</strong> 12</td>
-        </tr>
-
-
-        <tr>
-            <td></td>
-            <td><strong>Amount Per Serving</strong></td>
-            <td><strong>%Daily Value*</strong></td>
-        </tr>
-
-        <tr>
-            <td>Calories</td>
-            <td>200</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Calories from Fat</td>
-            <td>70</td>
-            <td></td>
-        </tr>
-
-        <tr>
-            <td>Total Fat</td>
-            <td>7 g</td>
-            <td>11%</td>
-        </tr>
-
-        <tr>
-            <td>Saturated Fat</td>
-            <td>4 g</td>
-            <td>20%</td>
-        </tr>
-
-        <tr>
-            <td>Trans Fat</td>
-            <td>0</td>
-            <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-            <td>Cholesterol</td>
-            <td>0 g</td>
-            <td>0%</td>
-        </tr>
-
-        <tr>
-            <td>Sodium</td>
-            <td>220 g</td>
-            <td>9%</td>
-        </tr>
-
-        <tr>
-            <td>Total Carbohydrate</td>
-            <td>31 g</td>
-            <td>10%</td>
-        </tr>
-
-        <tr>
-            <td>Dietary Fiber</td>
-            <td>5g </td>
-            <td>20%</td>
-        </tr>
-
-        <tr>
-            <td>Sugars</td>
-            <td>12 g</td>
-            <td></td>
-        </tr>
-
-        <tr>
-            <td>Sugar Alcohol</td>
-            <td>0 g</td>
-            <td></td>
-        </tr>
-
-        <tr>
-            <td>Protein</td>
-            <td>8 g</td>
-            <td>8%</td>
-        </tr>
-
-        <tr>
-            <td>Vitamin A</td>
-            <td></td>
-            <td>0%</td>
-        </tr>
-
-        <tr>
-            <td>Vitamin C</td>
-            <td></td>
-            <td>0%</td>
-        </tr>
-
-        <tr>
-            <td>Calcium</td>
-            <td></td>
-            <td>2%</td>
-        </tr>
-
-        <tr>
-            <td>Iron</td>
-            <td></td>
-            <td>10%</td>
-        </tr>
-
-        <tr>
-
-            <td colspan="3">* Percent Daily Values are based on a 2.000 calorie dieL Your daily values may be higher or lower depending on your calorie needs</td>
-
-        </tr>
-
-    </table>
-
-</section>
-
-
-
-<section id="review">
-    <h3>Reviews</h3>
-
-    <img src="Images/man-eating-burger.png" alt="man-eating-burger">
-    <h4>reviewer name</h4>
-    <h5>Dhahran-Feb08,2020 ⭐️⭐️⭐️⭐️⭐️</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ad natus officiis optio excepturi dignissimos, minima quaerat, quo vitae, veritatis corrupti fugiat sed ipsam pariatur nemo harum error sunt voluptatibus!</p>
-    <h4>Add your Review</h4>
-
-   
-    <form method="GET" action="detail.html" enctype="multipart/form-data">
-        <div>
-          <label for="file">Image</label>
-          <input type="file" id="file" name="myFile">
-        </div>
-
-        <div>
-            <label for="rate">Rate the Food</label>
-            <input type="range" id="rate" name="rate" min="0" max="5" value="3" list="tickmarks">
-            <datalist id = "tickmarks">
-                <option value="1"></option>
-                <option value="2"></option>
-                <option value="3"></option>
-                <option value="4"></option>
-                <option value="5"></option>
-            </datalist>
-
-        </div>
-
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="First and Last Name">
-        </div>
-        <label for="feedback">Review</label>
-        <div>
-            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
-        </div>
-        <div>
-          <button>Submit</button>
-        </div>
-      </form>
-   
-
-</section>
-
-
-<section id="Contact">
-    <ul>
-        <li>phone:+966531381813
-            <br>
-            <img src="Images/clock.svg" alt="clock">
-        </li>
-
-        <li>sun-thr 11:00-23:00
-            <br>
-            fri-sat 12:00-23
-            <br>
-        </li>
-
-        <li>
-            <img src="Images/placeholder.svg" alt="placeholder">
-            <p>123 KFUPM Students Mall</p>
-            <p>Dhahran 34464</p>
-        </li>
-
-        <li>
-            <a href="">facebook</a>
-            <a href="">Twitter</a>
-            <a href="">Instagram</a>
-        </li>
-
-    </ul>
-
-    <img src="Images/map.png" alt="">
-    <img src="Images/logo-red.svg" alt="">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aperiam possimus quia, in impedit doloribus
-        quidem corporis animi aliquid ab delectus nam repudiandae sapiente iure asperiores eveniet repellat suscipit
-        voluptates?</p>
-</section>
-
-<footer id="links">
-    <h3>useful links</h3>
-    <ul>
-        <li><a href="">About</a></li>
-        <li><a href="index.html#Menu">Menu</a></li>
-        <li><a href="index.html#Testimonials">Testimonials</a></li>
-        <li><a href="#Contact">Contact Us</a></li>
-    </ul>
-</footer>
-
+    </footer>
+</div>
 
 </body>
 </html>
