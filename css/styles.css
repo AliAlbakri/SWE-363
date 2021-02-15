@@ -15,11 +15,14 @@ h1,h2,h3,h4,h5,h6,button{
 }
 .container{
     margin: 0 10rem;
+    position: relative;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
+    position: relative;
+    top:7px;
 }
 
 header{
@@ -28,6 +31,26 @@ header{
     background-size: cover;
     width: 100%;
     color:white;
+
+}
+
+header button{
+    background-color: #ffaa00;
+    color: #A80E0E;
+    font-weight: bold;
+    padding: 10px 35px;
+    margin-top: 10%;
+    border:none;
+    border-radius: 7px;
+    transition: ease-in 0.2s;
+
+
+}
+
+header button:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.2s;
+    cursor: pointer;
 }
 
 
@@ -40,7 +63,6 @@ nav img{
     display: flex;
     flex-direction: row;
     list-style: none;
-
 }
 
 .nav-links a{
@@ -52,8 +74,8 @@ nav img{
     text-decoration: none;
     border-right: rgba(0,0,0,.5) 1px solid;
     transition: all 0.75s;
-
 }
+
 .nav-links a:hover{
     background-color: rgba(0,0,0,.7) ;
     opacity: 100%;
@@ -76,4 +98,22 @@ nav img{
     color: white;
 }
 
+.shape{
+    position: relative;
+    left: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #ffaa00;
+    height: 100px;
+    width:460px;
+    clip-path: polygon(100% 0%, 85% 46%, 100% 100%, 55% 100%, 0 100%, 15% 46%, 0 0);
+}
+
+.shape-text{
+    width:60%;
+    font-size: 25px;
+    font-weight: bold;
+}
 
