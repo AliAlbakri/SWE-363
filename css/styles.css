@@ -26,7 +26,7 @@ nav{
 }
 
 header{
-    height: 510px;
+    height: 100vh;
     background: url('../Images/party.png')  center ;
     background-size: cover;
     width: 100%;
@@ -35,16 +35,15 @@ header{
 }
 
 header button{
-    background-color: #ffaa00;
-    color: #A80E0E;
+    background-color: #A80E0E;
+    color: white;
+    font-size: 1.2rem;
     font-weight: bold;
-    padding: 10px 35px;
-    margin-top: 10%;
+    padding: 15px 55px;
+    margin-top: 15%;
     border:none;
     border-radius: 7px;
     transition: ease-in 0.2s;
-
-
 }
 
 header button:hover{
@@ -53,7 +52,13 @@ header button:hover{
     cursor: pointer;
 }
 
+header .title{
+    font-size: 2.5rem ;
+}
 
+nav{
+    margin-bottom: 5rem;
+}
 
 nav img{
     max-width: 7rem;
