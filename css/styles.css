@@ -55,13 +55,22 @@ nav img{
 
 }
 .nav-links a:hover{
-    background-color: #120c10;
+    background-color: rgba(0,0,0,.7) ;
+    opacity: 100%;
+    color: white;
     transition: all 0.75s;
     border-right: rgba(0,0,0,.5) 1px solid;
 }
 
 .nav-links .red-link a{
     background-color: #A80E0E;
+    opacity: 100%;
+    border: none;
+    color: white;
+}
+
+.nav-links .red-link a:hover{
+    background-color: #8a0a0a;
     opacity: 100%;
     border: none;
     color: white;
