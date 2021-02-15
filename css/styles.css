@@ -1,9 +1,17 @@
 @import "./detail/detail.css";
 @import "./detail/detail.css";
 
+/*import google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body{
     margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,button{
+    font-family: "Roboto", sans-serif;
 }
 .container{
     margin: 0 10rem;
@@ -15,8 +23,6 @@ nav{
 }
 
 header{
-    /* Center the image */
-    /* Do not repeat the image */
     height: 510px;
     background: url('../Images/party.png')  center ;
     background-size: cover;
@@ -41,7 +47,7 @@ nav img{
     padding: 15px 15px;
     background-color: #281923;
     opacity: 60%;
-    font-size: 1.2rem;
+    font-weight: bold;
     color: #dedede;
     text-decoration: none;
     border-right: rgba(0,0,0,.5) 1px solid;
