@@ -1,6 +1,5 @@
-.mealInfo{
-    list-style: none;
-}
+@import "footer.css";
+
 
 header{
     height: 100vh;

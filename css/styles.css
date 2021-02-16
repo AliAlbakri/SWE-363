@@ -8,6 +8,7 @@
 body{
     margin: 0;
     font-family: Montserrat, sans-serif;
+    font-weight: bolder;
 }
 
 h1,h2,h3,h4,h5,h6,button{
@@ -23,6 +24,10 @@ nav{
     justify-content: space-between;
     position: relative;
     top:7px;
+}
+
+ul{
+    list-style: none;
 }
 
 nav{
@@ -70,6 +75,10 @@ nav img{
     opacity: 100%;
     border: none;
     color: white;
+}
+
+section .title , footer .title{
+    color:#A80E0E;
 }
 
 
