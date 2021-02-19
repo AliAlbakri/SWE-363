@@ -1,5 +1,8 @@
 @import "footer.css";
-
+@import "Menu.css";
+@import "gallery.css";
+@import "testimonials.css";
+@import "contact.css";
 
 header{
     height: 100vh;
@@ -7,11 +10,12 @@ header{
     background-size: cover;
     width: 100%;
     color:white;
+    margin-bottom: 5rem;
 }
 
 header button{
-    background-color: #A80E0E;
-    color: white;
+    background-color: #ffaa00;
+    color: #A80E0E;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 15px 55px;
@@ -23,12 +27,19 @@ header button{
 
 header button:hover{
     transform: scale(1.1);
+    background-color: #FFDD00 ;
     transition: ease-in 0.2s;
     cursor: pointer;
 }
 
+
+
 header .title{
     font-size: 2.5rem ;
+}
+
+.offer{
+    padding-top: 10rem ;
 }
 
 .shape{

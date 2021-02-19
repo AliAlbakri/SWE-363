@@ -1,0 +1,46 @@
+
+#Gallery .title,p{
+
+    text-align: center;
+
+}
+
+#card{
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+    width: 444px;
+    margin-top: 20px;
+}
+
+#card ul{
+    margin-left: 20px;
+}
+
+#card ul li{
+    margin-top: 5px;
+}
+
+.mealInfo{
+    padding: 20px;
+}
+.mealInfo >*{
+    margin-top: 20px;
+}
+.mealInfo p{
+    width: fit-content;
+}
+
+.meal-order p{
+    display: inline;
+}
+
+.meal-order button{
+    padding:7px 20px;
+    background-color: #ffaa00;
+    border: none;
+    border-radius: 10px;
+}
+
+.weight200{
+    font-weight: 200;
+}
