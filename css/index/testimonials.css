@@ -4,9 +4,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap:2rem ;
-
 }
+
+.Testimonials-content img{
+    margin-right:2rem ;
+}
+
 #Testimonials .title{
     text-align: center;
 }
