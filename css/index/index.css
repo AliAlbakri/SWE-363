@@ -1,8 +1,7 @@
-@import "footer.css";
 @import "Menu.css";
 @import "gallery.css";
 @import "testimonials.css";
-@import "contact.css";
+
 
 header{
     height: 100vh;
