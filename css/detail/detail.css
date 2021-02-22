@@ -1,9 +1,15 @@
 table, th, td {
     border: 1px solid black;
 }
+#detail-nav{
+    background-color: #281923;
+    opacity: 61%;
+}
 .img{
     margin: 2rem 2rem 2rem 0;
     max-height: 25rem;
+    box-shadow: 0 10px 15px -2px rgba(0, 0, 0, 0.15);
+
 }
 
 
@@ -39,7 +45,7 @@ table, th, td {
     font-size: 1rem;
 }
 
-.add-button{
+.yellow-button{
     background-color: #ffaa00;
     padding: 2px 30px;
     height: 2rem;
@@ -50,7 +56,7 @@ table, th, td {
 
 
 
-.quantity-buttons >*:hover,.add-button:hover{
+.quantity-buttons >*:hover,.yellow-button:hover{
     cursor: pointer;
     background-color: #FFDD00 ;
 }
@@ -85,7 +91,7 @@ table, th, td {
     border-radius: 10px;
     border: 1px solid black;
     margin-top: 0.5rem;
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
 }
 
 #review form input[type="text"]:focus,#review form textarea:focus{
