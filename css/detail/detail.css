@@ -1,15 +1,18 @@
 table, th, td {
     border: 1px solid black;
 }
+.img{
+    margin: 2rem 2rem 2rem 0;
+    max-height: 25rem;
+}
+
 
 /* meal info section */
 #meal-info{
     margin-top:10rem;
 }
 
-.meal-img{
-    margin-right: 2rem;
-}
+
 .flex{
     display:flex;
 }
@@ -36,7 +39,7 @@ table, th, td {
     font-size: 1rem;
 }
 
-.add-to-cart{
+.add-button{
     background-color: #ffaa00;
     padding: 2px 30px;
     height: 2rem;
@@ -45,7 +48,9 @@ table, th, td {
     border: none;
 }
 
-.quantity-buttons >*:hover,.add-to-cart:hover{
+
+
+.quantity-buttons >*:hover,.add-button:hover{
     cursor: pointer;
     background-color: #FFDD00 ;
 }
@@ -55,3 +60,38 @@ table, th, td {
     margin-top: 2rem;
     text-align: left;
 }
+
+
+/*review section*/
+#review form {
+    display: flex;
+    flex-direction: column;
+}
+
+#review form > div {
+    margin-top: 1.5rem;
+}
+#review form input,#review textarea  {
+    display: block;
+}
+
+#review input[type="submit"]{
+    color: white;
+}
+
+#review input[type="text"],#review textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 0.5rem;
+    background-color: #f0f0f0;
+}
+
+#review form input[type="text"]:focus,#review form textarea:focus{
+   outline: none;
+   background-color: white;
+    border: 2px solid black;
+
+}
+
