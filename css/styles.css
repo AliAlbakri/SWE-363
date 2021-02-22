@@ -54,6 +54,9 @@ nav img{
 
 .nav-links{
     display: flex;
+    position: absolute;
+    right: 0;
+    top: 30px;
     flex-direction: row;
     list-style: none;
 }
