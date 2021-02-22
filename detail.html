@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal 1</title>
     <link rel="stylesheet" href="css/styles.css">
@@ -31,7 +33,7 @@
     <section id="meal-info">
 
         <div class="flex">
-            <img class="meal-img" src="Images/meal1.png" alt="delivery pizza guy">
+            <img class="img" src="Images/meal1.png" alt="delivery pizza guy">
 
             <div>
                 <h1 class='title'>Best Sandwich</h1>
@@ -46,7 +48,7 @@
                         <button>1</button>
                         <button>+</button>
                     </div>
-                    <input class="add-to-cart" type="button" value="add to cart">
+                    <input class="add-button" type="button" value="add to cart">
                 </div>
             </div>
 
@@ -55,7 +57,8 @@
 
         <div id="Description">
             <h2 class="title">Description</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti, dolorum ipsum laboriosam maiores quae rem vel voluptatum! Explicabo facere harum iste
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti, dolorum ipsum laboriosam
+                maiores quae rem vel voluptatum! Explicabo facere harum iste
                 neque optio quia ratione recusandae tenetur veniam? Voluptatem.
             </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur deserunt dolore,
@@ -201,18 +204,23 @@
 
 
     <section id="review">
-        <h3>Reviews</h3>
+        <h2 class="title">Reviews</h2>
+        <div class="flex">
+            <img class="img" src="Images/man-eating-burger.png" alt="man-eating-burger">
+            <div>
+                <h4>reviewer name</h4>
+                <h5>Dhahran-Feb08,2020 ⭐️⭐️⭐️⭐️⭐️</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ad natus officiis optio excepturi
+                    dignissimos, minima quaerat, quo vitae, veritatis corrupti fugiat sed ipsam pariatur nemo harum
+                    error sunt
+                    voluptatibus!</p>
+            </div>
+        </div>
 
-        <img src="Images/man-eating-burger.png" alt="man-eating-burger">
-        <h4>reviewer name</h4>
-        <h5>Dhahran-Feb08,2020 ⭐️⭐️⭐️⭐️⭐️</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ad natus officiis optio excepturi
-            dignissimos, minima quaerat, quo vitae, veritatis corrupti fugiat sed ipsam pariatur nemo harum error sunt
-            voluptatibus!</p>
-        <h4>Add your Review</h4>
+        <button class="add-button">Add your Review</button>
 
+        <form  method="GET" action="detail.html">
 
-        <form method="GET" action="detail.html" enctype="multipart/form-data">
             <div>
                 <label for="file">Image</label>
                 <input type="file" id="file" name="myFile">
@@ -221,6 +229,9 @@
             <div>
                 <label for="rate">Rate the Food</label>
                 <input type="range" id="rate" name="rate" min="0" max="5" value="3" list="tickmarks">
+            </div>
+
+            <div>
                 <datalist id="tickmarks">
                     <option value="1"></option>
                     <option value="2"></option>
@@ -235,12 +246,14 @@
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="First and Last Name">
             </div>
-            <label for="feedback">Review</label>
+
             <div>
-                <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+                <label for="feedback">Review</label>
+                <textarea placeholder="Type your review here 500 character max" name="feedback" id="feedback" cols="30" rows="10"></textarea>
             </div>
+
             <div>
-                <button>Submit</button>
+                <input class="add-button" type="submit" value="Submit">
             </div>
         </form>
 
