@@ -1,5 +1,12 @@
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #DDD;
+    border-collapse: collapse;
+    height: 33px;
+    
+}
+table{
+    border-color: red ;
+
 }
 #detail-nav{
     background-color: #281923;
@@ -59,6 +66,13 @@ table, th, td {
 .quantity-buttons >*:hover,.yellow-button:hover{
     cursor: pointer;
     background-color: #FFDD00 ;
+}
+
+tr:hover {
+    background-color: #DDD;
+}
+.row-coloring{
+    background-color: #f2f2f2;
 }
 
 
