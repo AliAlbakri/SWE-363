@@ -25,7 +25,8 @@
                 <li><a href="#Contact">Contact Us</a></li>
                 <li class="red-link"><a href="#">Search</a></li>
                 <li class="red-link"><a href="#">Profile</a></li>
-                <li class="red-link"><a href="#">Cart</a></li>
+                <li class="red-link"><a href="#">Cart <span id="cart-display">0</span></a></li>
+
             </ul>
         </nav>
 
@@ -102,7 +103,7 @@
                     <p>Best sandwich</p>
                     <p class="weight200">Some description</p>
                     <div class="meal-order">
-                        <button>Order now</button>
+                        <button onclick="incrementCart()" id="increment" onClick="increment()">Add to cart</button>
                         <p class="weight200">39.9 SAR</p></div>
                 </div>
 
@@ -197,7 +198,7 @@
         </div>
 
         <div>
-            <h3 class="title">INTEGRAM FEEDS</h3>
+            <h3 class="title">INSTAGRAM FEEDS</h3>
 
             <div class="grid-gallery">
                 <a href="#"><img src="Images/meal1.png" alt=""></a>
@@ -214,6 +215,7 @@
     </footer>
     </div>
 
+<script type="text/javascript" src="./js/index.js"></script>
 
 
 </body>

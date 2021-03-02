@@ -10,6 +10,11 @@
     margin: 0;
     padding: 0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     font-family: Montserrat, sans-serif;
@@ -96,6 +101,14 @@ nav img{
 
 section .title , footer .title{
     color:#A80E0E;
+}
+
+#cart-display{
+    background-color: #ffaa00;
+    color: #8a0a0a;
+    width: 1.5rem;
+    text-align: center;
+    display:inline-block;
 }
 
 

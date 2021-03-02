@@ -24,7 +24,7 @@
         <li><a href="#Contact">Contact Us</a></li>
         <li class="red-link"><a href="#">Search</a></li>
         <li class="red-link"><a href="#">Profile</a></li>
-        <li class="red-link"><a href="#">Cart</a></li>
+        <li class="red-link"><a href="#">Cart <span id="cart-display">0</span></a></li>
     </ul>
 </nav>
 
@@ -44,11 +44,11 @@
                     laboriosam omnis quis suscipit totam!</p>
                 <div class="flex ">
                     <div class="quantity-buttons">
-                        <button>-</button>
-                        <button>1</button>
-                        <button>+</button>
+                        <button onclick="decrementQuantity()">-</button>
+                        <button id="quantity-display">1</button>
+                        <button onclick="incrementQuantity()">+</button>
                     </div>
-                    <input class="yellow-button" type="button" value="add to cart">
+                    <input onclick="addQuantityToCart()" class="yellow-button" type="button" value="add to cart">
                 </div>
             </div>
 
@@ -339,6 +339,7 @@
     </footer>
 </div>
 
+<script type="text/javascript" src="./js/index.js"></script>
 
 </body>
 </html>
