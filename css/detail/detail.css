@@ -57,6 +57,9 @@ table, th, td {
     border: none;
 }
 
+.yellow-button:focus{
+    outline: none;
+}
 
 
 .quantity-buttons >*:hover,.yellow-button:hover{
