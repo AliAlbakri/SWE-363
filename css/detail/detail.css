@@ -82,6 +82,8 @@ tr:hover {
 
 
 /*review section*/
+
+
 #review form {
     display: flex;
     flex-direction: column;
@@ -112,5 +114,22 @@ tr:hover {
    background-color: white;
     border: 2px solid black;
 
+}
+ #formWrapper{
+    overflow-x: hidden;  
+} 
+#form{
+    position: relative;
+    left: 1300px ;
+}
+
+.hide{
+    display: none !important ;
+}
+
+
+#msgForEmptyForm{
+    margin-top: 2rem;
+    color: red;
 }
 

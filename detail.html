@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal 1</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 
@@ -217,45 +219,49 @@
             </div>
         </div>
 
-        <button class="yellow-button">Add your Review</button>
+        <button class="yellow-button" id="addRevBtn">Add your Review</button>
 
-        <form  method="GET" action="detail.html">
+        <div id="formWrapper">
+            <form  method="GET" action="detail.html" id="form" class="hide" >
 
-            <div>
-                <label for="file">Image</label>
-                <input type="file" id="file" name="myFile">
-            </div>
-
-            <div>
-                <label for="rate">Rate the Food</label>
-                <input type="range" id="rate" name="rate" min="0" max="5" value="3" list="tickmarks">
-            </div>
-
-            <div>
-                <datalist id="tickmarks">
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                    <option value="4"></option>
-                    <option value="5"></option>
-                </datalist>
-
-            </div>
-
-            <div>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="First and Last Name">
-            </div>
-
-            <div>
-                <label for="feedback">Review</label>
-                <textarea placeholder="Type your review here 500 character max" name="feedback" id="feedback" cols="30" rows="10"></textarea>
-            </div>
-
-            <div>
-                <input class="yellow-button" type="submit" value="Submit">
-            </div>
-        </form>
+                <div>
+                    <label for="file">Image</label>
+                    <input type="file" id="file" name="myFile">
+                </div>
+    
+                <div>
+                    <label for="rate">Rate the Food</label>
+                    <input type="range" id="rate" name="rate" min="0" max="5" value="3" list="tickmarks">
+                </div>
+    
+                <div>
+                    <datalist id="tickmarks">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                    </datalist>
+    
+                </div>
+    
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="First and Last Name">
+                </div>
+    
+                <div>
+                    <label for="feedback">Review</label>
+                    <h4 id="msgForEmptyForm" class="hide" >Type your review</h4>
+                    <textarea maxlength="500" placeholder="Type your review here 500 character max" name="feedback" id="feedback" cols="30" rows="10" onkeypress="removeErrorMessage()"></textarea>
+                    <div id="counter">0/500</div>
+                </div>
+    
+                <div>
+                    <input class="yellow-button" type="button" onclick="validateForm()" value="Submit">
+                </div>
+            </form>
+        </div>
 
 
     </section>
