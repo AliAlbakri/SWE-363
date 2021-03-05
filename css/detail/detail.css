@@ -101,7 +101,7 @@ tr:hover {
 }
 
 #review input[type="text"],#review textarea{
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid black;
@@ -120,7 +120,7 @@ tr:hover {
 } 
 #form{
     position: relative;
-    left: 1300px ;
+    left: 1100px ;
 }
 
 .hide{
