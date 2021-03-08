@@ -52,6 +52,7 @@ function validateForm(){
 	
 	if (feedback.value == ""){
 		msg.classList.remove("hide")
+		feedback.focus()
 	}
 	else{
 		if(customerName.value.length == 0){
