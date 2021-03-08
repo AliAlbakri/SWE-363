@@ -228,12 +228,12 @@
                     <label for="file">Image</label>
                     <input type="file" id="file" name="myFile">
                 </div>
-    
+
                 <div>
                     <label for="rate">Rate the Food</label>
                     <input type="range" id="rate" name="rate" min="0" max="5" value="3" list="tickmarks">
                 </div>
-    
+
                 <div>
                     <datalist id="tickmarks">
                         <option value="1"></option>
@@ -242,21 +242,21 @@
                         <option value="4"></option>
                         <option value="5"></option>
                     </datalist>
-    
+
                 </div>
-    
+
                 <div>
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" placeholder="First and Last Name">
                 </div>
-    
+
                 <div>
                     <label for="feedback">Review</label>
                     <h4 id="msgForEmptyForm" class="hide" >Type your review</h4>
                     <textarea maxlength="500" placeholder="Type your review here 500 character max" name="feedback" id="feedback" cols="30" rows="10" onkeypress="removeErrorMessage()"></textarea>
                     <div id="counter">0/500</div>
                 </div>
-    
+
                 <div>
                     <input class="yellow-button" type="button" onclick="validateForm()" value="Submit">
                 </div>
@@ -345,7 +345,7 @@
     </footer>
 </div>
 
-<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 
 </body>
 </html>
