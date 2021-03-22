@@ -33,6 +33,16 @@ function addQuantityToCart(){
 }
 
 //___________________________________________________
+// toggle navbar
+let Nav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+
+navBarToggle.addEventListener('click', function () {
+	console.log("hello")
+	Nav.classList.toggle('active');
+});
+
+//__________________________________________________
 
 // Form Functionalities
 
@@ -49,7 +59,7 @@ $("#addRevBtn").click(function () {
 });
 
 function validateForm(){
-	
+
 	if (feedback.value == ""){
 		msg.classList.remove("hide")
 		feedback.focus()
@@ -60,7 +70,7 @@ function validateForm(){
 		}
 		form.submit()
 	}
-	
+
 
 }
 
@@ -73,7 +83,8 @@ feedback.addEventListener('input', function(e) {
 
 function removeErrorMessage(){
 	msg.classList.add("hide")
-	
+
 }
+//___________________________________________________
 
 

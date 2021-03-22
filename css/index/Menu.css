@@ -17,7 +17,6 @@
 .image-background{
     background-color: orange;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -40,3 +39,16 @@
     clip-path: polygon(0 0, 100% 47%, 0 100%);
 }
 
+
+@media all and (max-width: 990px) {
+    .image-background{
+        flex-direction: column;
+    }
+
+    #ttt{
+        font-size: 1.3rem;
+        
+    }
+
+
+}
