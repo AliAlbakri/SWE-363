@@ -2,9 +2,9 @@ table, th, td {
     border: 1px solid #DDD;
     border-collapse: collapse;
     height: 33px;
-    
+
 }
-#detail-nav{
+.detail-nav{
     background-color: #281923;
     opacity: 61%;
 }
@@ -116,8 +116,8 @@ tr:hover {
 
 }
  #formWrapper{
-    overflow-x: hidden;  
-} 
+    overflow-x: hidden;
+}
 #form{
     position: relative;
     left: 1100px ;
