@@ -124,7 +124,7 @@ section .title , footer .title{
 
 .navbar-dark .navbar-nav .nav-link{
     color: white;
-}    
+}
 
 .landing{
     display: flex;
@@ -155,7 +155,10 @@ section{
         left: 0;
         right:0;
         }
-    
+
+    .container {
+        position: static;
+    }
 
 
   }
