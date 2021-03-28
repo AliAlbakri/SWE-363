@@ -33,19 +33,9 @@ function addQuantityToCart(){
 }
 
 //___________________________________________________
-// toggle navbar
-let Nav = document.getElementById('js-menu');
-let navBarToggle = document.getElementById('js-navbar-toggle');
 
-navBarToggle.addEventListener('click', function () {
-	console.log("hello")
-	Nav.classList.toggle('active');
-});
-
-//__________________________________________________
 
 // Form Functionalities
-
 
 let form = document.getElementById("form")
 let msg = document.getElementById("msgForEmptyForm")
