@@ -39,7 +39,7 @@ footer {
 
 
 /*tablet screens*/
-@media only screen and (min-device-width: 500px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
 
     .about {
         max-width: 100%;
@@ -61,7 +61,7 @@ footer {
 
 
 /*mobile screens*/
-@media only screen and (min-device-width: 300px) and (max-device-width: 499px) {
+@media only screen and (min-width: 300px) and (max-width: 499px) {
 
     .about {
         max-width: 100%;
@@ -74,12 +74,16 @@ footer {
         display: block;
     }
 
+    footer div .title{
+        text-align: left;
+    }
+
     .grid-gallery {
         grid-template-columns: repeat(3, auto);
 
     }
 
     .grid-gallery img {
-        width: 300px;
+        width: 290px;
     }
 }
