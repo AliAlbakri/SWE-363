@@ -31,11 +31,7 @@ html, body {
 h1,h2,h3,h4,h5,h6,button{
     font-family: "Roboto", sans-serif;
 }
-.container{
-    margin: 0 10rem;
-    position: relative;
 
-}
 
 .navbar{
     position:absolute;
@@ -112,6 +108,7 @@ nav img{
 
 section .title , footer .title{
     color:#A80E0E;
+    text-align: center;
 }
 
 #cart-display{
@@ -156,9 +153,6 @@ section{
         right:0;
         }
 
-    .container {
-        position: static;
-    }
 
 
   }

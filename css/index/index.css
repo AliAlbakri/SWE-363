@@ -42,8 +42,6 @@ header .title{
 }
 
 .shape{
-    position: relative;
-    left: -50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,14 +58,26 @@ header .title{
     font-weight: bold;
 }
 
+.carousel-indicators li{
+    background-color: #ffaa00;
+}
+
+.carousel-indicators{
+    position: inherit;
+}
+
 
 @media all and (max-width: 990px) {
 
     .shape {
-    height: 170px;
+    height: 130px;
     }
 
     header{
         height:80vh;
+    }
+
+    .offer{
+        padding: 0;
     }
 }
