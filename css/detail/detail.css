@@ -134,7 +134,14 @@ tr:hover {
 }
 
 .my-tabs{
+    margin:  .5rem;
+    padding: 0 35px;
+    border-radius: 10px;
+}
+ .tab a{
+    text-decoration: none;
+}
+ul .active{
     background-color: #ffaa00;
-    margin: .5rem;
     border-radius: 10px;
 }

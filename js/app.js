@@ -79,7 +79,7 @@ function addQuantityToCart(){
 //___________________________________________________
 
 
-// ************************ detail functions******************
+// ************************ detail functions ******************
 let path = window.location.pathname;
 let page = path.split("/").pop();
 // Form Functionalities
@@ -123,6 +123,12 @@ if(page==='detail.html') {
 
 	}
 }
+
+$('ul .tab').click(function (){
+	$('ul .tab').removeClass("active")
+	$(this).addClass('active')
+
+})
 // **************************************************
 //___________________________________________________
 
