@@ -133,8 +133,12 @@ tr:hover {
     color: red;
 }
 
-.my-tabs{
+/* .my-tabs{
     background-color: #ffaa00;
     margin: .5rem;
     border-radius: 10px;
+} */
+
+#desc,#menu1{
+    background-color: transparent !important;
 }

@@ -150,3 +150,18 @@ let meals = {
 	},
 
 }
+
+let myreview = document.getElementById("rev")
+let mydec = document.getElementById("mydec")
+function mufun(){
+
+	myreview.classList.add("colorCh")
+	mydec.classList.remove("colorCh")
+}
+
+function toggleDec(){
+	myreview.classList.remove("colorCh")
+	mydec.classList.add("colorCh")
+}
+
+
