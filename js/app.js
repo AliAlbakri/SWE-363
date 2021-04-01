@@ -58,7 +58,7 @@ $('#cart').click(function (){
 
 
 
-// cart for detail.html
+// cart for detail.php
 
 function incrementQuantity(){
 	quantityDisplay.innerHTML = ++quantityCount+"";
@@ -84,7 +84,7 @@ let path = window.location.pathname;
 let page = path.split("/").pop();
 // Form Functionalities
 
-if(page==='detail.html') {
+if(page==='detail.php') {
 	let form = document.getElementById("form")
 	let msg = document.getElementById("msgForEmptyForm")
 	let customerName = document.getElementById("name")

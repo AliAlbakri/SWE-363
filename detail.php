@@ -31,7 +31,7 @@
     <div class="ml-auto collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
         <ul class="navbar-nav text-center nav-links">
             <li class="nav-item " >
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="index.php">Home</a>
             </li>
 
             <li class="nav-item " >
@@ -278,7 +278,7 @@
                 <button class="yellow-button" id="addRevBtn">Add your Review</button>
 
                 <div id="formWrapper">
-                    <form  method="GET" action="detail.html" id="form" class="hide" >
+                    <form method="GET" action="detail.php" id="form" class="hide" >
 
                         <div>
                             <label for="file">Image</label>
