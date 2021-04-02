@@ -19,72 +19,10 @@
 
 <body>
 
-<header>
 
-    <nav class="navbar navbar-expand-lg   navbar-dark justify-content-spacebetween">
-        <a class="navbar-brand " href="#">
-            <img src="./Images/logo-White.svg" alt="">
-        </a>
-
-        <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="ml-auto collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-            <ul class="navbar-nav text-center nav-links">
-                <li class="nav-item ">
-                    <a class="nav-link" href="index.php">Home</a>
-                </li>
-
-                <li class="nav-item ">
-                    <a class="nav-link" href="#Menu">Menu</a></a>
-                </li>
-
-                <li class="nav-item ">
-                    <a class="nav-link" href="#Gallery">Gallery</a></a>
-                </li>
-
-                <li class="nav-item ">
-                    <a class="nav-link" href="#Testimonials">Testimonials</a></a>
-                </li>
-
-                <li class="nav-item ">
-                    <a class="nav-link" href="#Contact">Contact Us</a></a>
-                </li>
-
-                <li class="red-link nav-item">
-                    <a class="nav-link" href="#">Search <i class="fas fa-search"></i></a>
-                </li>
-
-                <li class="red-link nav-item">
-                    <a class="nav-link" href="#">Profile <i class="fas fa-user"></i></a>
-                </li>
-
-                <li id="cart" data-toggle="modal" data-target="#cart-modal" class="red-link nav-item">
-                    <a class="nav-link" href="#">Cart <i class="fas fa-shopping-cart"></i> <span id="cart-display">0 </span> </a>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container landing">
-        <p class="mb-5"></p>
-        <h1 class="title mt-5">Party Time</h1>
-
-        <div class="offer">
-            <div class="shape">
-                <div class="shape-text">
-                    Buy any 2 burgers and get 1.5L Pepsi Free
-                </div>
-            </div>
-        </div>
-
-        <button id='order'>Order Now</button>
-    </div>
-
-
-</header>
-
+<?php
+include './include/inc.header.php'
+?>
 
 <Section id="Menu">
     <h2 class="title">Want to Eat</h2>
@@ -131,99 +69,31 @@
 
 
         <div class="row justify-content-center justify-content-lg-start">
+            <?php
+            include './php/Meal.php';
+            $meal = new Meal();
+            $meals = $meal->getAllMeals();
+
+            foreach ($meals as $meal) { ?>
             <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
-
-                <a href="detail.php">
-
-                    <img src="Images/meal1.png" alt="meal1" class="card-img-top">
+                <a href="<?php echo "detail&id?".  $meal['id']  ?>">
+                    <img  src="<?php echo "Images/".$meal['image'] ?>"   class="card-img-top" alt="<?php echo $meal['title']; ?>">
                 </a>
-                <div class="mealInfo">
-                    <p class="weight200">⭐️ 4.5 rating</p>
-                    <p>Best sandwich</p>
-                    <p class="weight200">Some description</p>
-                    <div class="meal-order">
-                        <button name="Best sandwich" onclick="incrementCart(event)" id="increment" onClick="increment()">Add to cart</button>
-                        <p class="weight200">39.9 SAR</p></div>
-                </div>
+
+                    <div class="mealInfo">
+                        <p class="weight200">⭐️ <?php echo $meal['rating']?> rating</p>
+                        <p> <?php echo $meal['title']  ?></p>
+                        <p class="weight200"><?php echo $meal['description']  ?></p>
+                        <div class="meal-order">
+                            <button name="<?php echo $meal['title']  ?>" onclick="incrementCart(event)" id="increment" onClick="increment()">Add
+                                to cart
+                            </button>
+                            <p class="weight200"><?php echo $meal['price'] ?> SAR</p></div>
+                    </div>
+
 
             </div>
-
-            <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
-
-                <a href="detail.php">
-
-                    <img src="Images/meal2.png" alt="meal1" class="card-img-top">
-                </a>
-                <div class="mealInfo">
-                    <p class="weight200">⭐️ 4.5 rating</p>
-                    <p>Burger</p>
-                    <p class="weight200">Some description</p>
-                    <div class="meal-order">
-                        <button name="Burger" onclick="incrementCart(event)" id="increment" onClick="increment()">Add to cart</button>
-                        <p class="weight200">29.9 SAR</p></div>
-                </div>
-            </div>
-            <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
-
-                <a href="detail.php">
-
-                    <img src="Images/meal3.png" alt="meal1" class="card-img-top">
-                </a>
-                <div class="mealInfo">
-                    <p class="weight200">⭐️ 4.5 rating</p>
-                    <p>Burger Meal</p>
-                    <p class="weight200">Some description</p>
-                    <div class="meal-order">
-                        <button name="Burger Meal" onclick="incrementCart(event)" id="increment" onClick="increment()">Add to cart</button>
-                        <p class="weight200">27.9 SAR</p></div>
-                </div>
-            </div>
-            <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
-
-                <a href="detail.php">
-
-                    <img src="Images/meal4.png" alt="meal1" class="card-img-top">
-                </a>
-                <div class="mealInfo">
-                    <p class="weight200">⭐️ 4.5 rating</p>
-                    <p>Best Deal Meal</p>
-                    <p class="weight200">Some description</p>
-                    <div class="meal-order">
-                        <button name="Best Deal Meal" onclick="incrementCart(event)" id="increment" >Add to cart</button>
-                        <p class="weight200">25.9 SAR</p></div>
-                </div>
-            </div>
-            <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
-
-                <a href="detail.php">
-
-                    <img src="Images/meal5.png" alt="meal1" class="card-img-top">
-                </a>
-                <div class="mealInfo">
-                    <p class="weight200">⭐️ 4.5 rating</p>
-                    <p>Chicken Burger</p>
-                    <p class="weight200">Some description</p>
-                    <div class="meal-order">
-                        <button name="Chicken Burger" onclick="incrementCart(event)" id="increment" onClick="increment()">Add to cart</button>
-                        <p class="weight200">22.9 SAR</p></div>
-                </div>
-            </div>
-
-            <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
-
-                <a href="detail.php">
-
-                    <img src="Images/meal6.png" alt="meal1" class="card-img-top">
-                </a>
-                <div class="mealInfo">
-                    <p class="weight200">⭐️ 4.5 rating</p>
-                    <p>Pizza</p>
-                    <p class="weight200">Some description</p>
-                    <div class="meal-order">
-                        <button name="Pizza" onclick="incrementCart(event)" id="increment" onClick="increment()">Add to cart</button>
-                        <p class="weight200">45.9 SAR</p></div>
-                </div>
-            </div>
+            <?php } ?>
 
         </div>
 
@@ -268,7 +138,8 @@
 
 
                 </div>
-                <p class="col-lg-6 col-sm-11" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nam aut deserunt minus-->
+                <p class="col-lg-6 col-sm-11">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nam aut
+                    deserunt minus-->
                     provident aliquid
                     maxime
                     et? Nisi incidunt laborum beatae debitis. Voluptatibus, qui recusandae assumenda a
@@ -278,124 +149,14 @@
             </div>
 
 
-
         </div>
 
     </Section>
 
 </div>
 
+<?php include './include/inc.footer.php' ?>
 
-<Section id="Contact">
-
-
-    <div class="info">
-
-        <div class="info-item">
-            phone:<strong>+966531381813</strong>
-        </div>
-
-
-        <div class="info-item">
-            <img class="icon" src="Images/clock.svg" alt="clock">
-            <p class="weight200">Sun-thr 11:00-23:00
-                <br>
-                fri-sat 12:00-23</p>
-        </div>
-
-        <div class="info-item">
-            <img class="icon" src="Images/placeholder.svg" alt="placeholder">
-            <p class="weight200">123 KFUPM Studemts Mall
-                <br>
-                Dhahran 34464
-            </p>
-        </div>
-
-        <div class="social info-item">
-            <a href="">facebook</a>
-            <a href="">Twitter</a>
-            <a href="">Instagram</a>
-        </div>
-
-
-    </div>
-
-
-    <img src="Images/map.png" alt="">
-</Section>
-
-
-<footer class="mx-md-5 mx-2 row">
-
-    <div class="about col-lg-4 col-sm-11">
-        <img src="Images/logo-red.svg" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aperiam possimus quia, in impedit
-            doloribus quidem corporis animi aliquid ab delectus nam repudiandae sapiente iure asperiores eveniet
-            repellat suscipit voluptates?</p>
-    </div>
-
-    <div class="useful-links col-lg-4 col-md-6 col-sm-12">
-        <h3 class="title">USEFUL LINKS</h3>
-        <ul class="footer-links">
-            <li><a href="">About</a></li>
-            <li><a href="#Menu">Menu</a></li>
-            <li><a href="#Testimonials">Testimonials</a></li>
-            <li><a href="#Contact">Contact Us</a></li>
-        </ul>
-    </div>
-
-    <div class="feeds col-lg-4 col-md-6 col-sm-12">
-        <h3 class="title">INSTAGRAM FEEDS</h3>
-
-        <div class="grid-gallery">
-            <a href="#"><img src="Images/meal1.png" alt=""></a>
-            <a href="#"><img src="Images/meal2.png" alt=""></a>
-            <a href="#"><img src="Images/meal3.png" alt=""></a>
-            <a href="#"><img src="Images/meal4.png" alt=""></a>
-            <a href="#"><img src="Images/meal5.png" alt=""></a>
-            <a href="#"><img src="Images/meal6.png" alt=""></a>
-
-        </div>
-    </div>
-
-
-</footer>
-
-
-<!-- Modal -->
-<div class="modal fade" id="cart-modal" tabindex="-1" role="dialog" aria-labelledby="cart-modalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="cart-modalLabel">Cart Items</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mx-5 ">
-                <div class="row justify-content-between">
-                    <p>item</p>
-                    <p>price</p>
-                </div>
-
-                <div id="cart-items">
-
-                </div>
-
-                <div class="row justify-content-between">
-                    <p>Total</p>
-                    <p id="total-display-cart">0</p>
-                </div>
-
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
-                <button id="order-now" type="button" class="btn  btn-warning">Order now</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script type="text/javascript" src="js/app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
