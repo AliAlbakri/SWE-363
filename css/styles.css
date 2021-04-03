@@ -57,6 +57,10 @@ nav{
     color: #059800;
 }
 
+.table td {
+    text-align: center;
+}
+
 
 
 ul{
