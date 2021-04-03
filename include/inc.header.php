@@ -1,5 +1,4 @@
-<header>
-    <nav class="navbar navbar-expand-lg   navbar-dark justify-content-spacebetween">
+    <nav  class="navbar navbar-expand-lg  navbar-custom  navbar-dark justify-content-spacebetween">
         <a class="navbar-brand " href="#">
             <img src="./Images/logo-White.svg" alt="">
         </a>
@@ -38,30 +37,13 @@
                 </li>
 
                 <li id="cart" data-toggle="modal" data-target="#cart-modal" class="red-link nav-item">
-                    <a class="nav-link" href="#">Cart <i class="fas fa-shopping-cart"></i> <span id="cart-display">0 </span> </a>
+                    <a class="nav-link" >Cart <i class="fas fa-shopping-cart"></i> <span id="cart-display">0 </span> </a>
                 </li>
 
             </ul>
         </div>
     </nav>
 
-    <div class="container landing">
-        <p class="mb-5"></p>
-        <h1 class="title mt-5">Party Time</h1>
-
-        <div class="offer">
-            <div class="shape">
-                <div class="shape-text">
-                    Buy any 2 burgers and get 1.5L Pepsi Free
-                </div>
-            </div>
-        </div>
-
-        <button id='order'>Order Now</button>
-    </div>
-
-
-</header>
 
 <!-- Modal -->
 <div class="modal fade" id="cart-modal" tabindex="-1" role="dialog" aria-labelledby="cart-modalLabel" aria-hidden="true">

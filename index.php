@@ -20,10 +20,29 @@
 <body>
 
 
-<?php
-include './include/inc.header.php'
-?>
 
+<header>
+    <?php
+    include './include/inc.header.php'
+    ?>
+
+    <div class="container landing">
+        <p class="mb-5"></p>
+        <h1 class="title mt-5">Party Time</h1>
+
+        <div class="offer">
+            <div class="shape">
+                <div class="shape-text">
+                    Buy any 2 burgers and get 1.5L Pepsi Free
+                </div>
+            </div>
+        </div>
+
+        <button id='order'>Order Now</button>
+    </div>
+
+
+</header>
 <Section id="Menu">
     <h2 class="title">Want to Eat</h2>
     <p>Try out most delicious food and usually take minutes to deliver</p>

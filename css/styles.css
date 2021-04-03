@@ -48,6 +48,11 @@ nav{
     right: 10rem;
 }
 
+.navbar-custom {
+    background-color: #281923;
+    opacity: 60%;
+}
+
 
 
 ul{
