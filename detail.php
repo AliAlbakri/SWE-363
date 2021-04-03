@@ -28,11 +28,9 @@ include "./include/inc.header.php";
 
     <section id="meal-info">
         <?php
-        include './php/Meal.php';
         $id = htmlspecialchars($_GET["id"]);
 
-        $meals = new Meal();
-        $meal = $meals->getMealById($id);
+        $meal = $Meal->getMealById($id);
 
         ?>
         <div class="flex">

@@ -13,30 +13,6 @@ let totalDisplay = document.querySelector('#total-display-cart')
 
 
 
-// for index.html
-
-function incrementCart(e) {
-	let meal = e.target.name
-	let price = meals[meal].price
-
-	let cartItem = document.createElement("div")
-
-	cartItem.innerHTML = `<div class="row justify-content-between ">
-		                        <p>${meal}</p>
-		                        <p>${price}</p>
-		                  </div>`
-
-	cartItems.appendChild(cartItem);
-
-	let totalPrice  = (cartTotal + price)
-
-
-	totalDisplay.innerText= totalPrice;
-	cartDisplay.innerHTML = ++cartCount+"";
-
-	// update cart total
-	cartTotal = totalPrice;
-}
 
 // order button
 $('#cart').click(function (){

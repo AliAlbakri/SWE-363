@@ -87,11 +87,11 @@
         <p>Try out most delicious food and usually take minutes to deliver</p>
 
 
+
         <div class="row justify-content-center justify-content-lg-start">
             <?php
-            include './php/Meal.php';
-            $meal = new Meal();
-            $meals = $meal->getAllMeals();
+
+            $meals = $Meal->getAllMeals();
 
             foreach ($meals as $meal) { ?>
             <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
@@ -104,9 +104,15 @@
                         <p> <?php echo $meal['title']  ?></p>
                         <p class="weight200"><?php echo $meal['description']  ?></p>
                         <div class="meal-order">
-                            <button name="<?php echo $meal['title']  ?>" onclick="incrementCart(event)" id="increment" onClick="increment()">Add
-                                to cart
-                            </button>
+
+                            <form action="php/cart.php" method="post">
+                                <input type="hidden" name="id" value="<?php echo $meal['id'] ?>">
+
+                                <button type="submit" id="increment" onClick="increment()">
+                                    Add to cart
+                                </button>
+                            </form>
+                            
                             <p class="weight200"><?php echo $meal['price'] ?> SAR</p></div>
                     </div>
 
