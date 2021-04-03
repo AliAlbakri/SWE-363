@@ -95,7 +95,7 @@
 
             foreach ($meals as $meal) { ?>
             <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
-                <a href="<?php echo "detail&id?".  $meal['id']  ?>">
+                <a href=" detail.php?id=<?php echo  $meal['id']  ?>">
                     <img  src="<?php echo "Images/".$meal['image'] ?>"   class="card-img-top" alt="<?php echo $meal['title']; ?>">
                 </a>
 

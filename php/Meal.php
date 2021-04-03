@@ -431,9 +431,8 @@ class meal
     }
 
     function getMealById($id){
-
         foreach ($this->meals as $meal) {
-            if ($meal['id'] === $id) {
+            if ($meal['id'] == $id) {
                 return $meal;
             }
         }
