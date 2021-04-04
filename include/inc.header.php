@@ -61,70 +61,38 @@ $Meal = new Meal();
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="cart-modalLabel">Cart Items</h5>
+                <h5 class="modal-title" id="cart-modalLabel">Cart Meals</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body ">
-                <table class="table-borderless w-100">
-                    <thead>
-                    <tr>
-                        <td scope="col">Meal</td>
-                        <td scope="col">Quantity</td>
-                        <td scope="col">Price</td>
-                    </tr>
-                    </thead>
-                    <?php
-                    $total = 0;
-                    foreach ($cart as $COOKIE_Meal) {
-                        $meal = $Meal->getMealById($COOKIE_Meal->id)
-                        ?>
-                        <tbody>
-                        <tr class="my-3">
-                            <?php $price = $meal['price']*$COOKIE_Meal->quantity ; ?>
-                            <td><?php echo $meal['title'] ?></td>
-                            <td><?php echo $COOKIE_Meal->quantity?></td>
-                            <td><?php echo $price ?></td>
-                        </tr>
-
-                        <?php $total += $price;
-                        } ?>
-                        <tr>
-                            <td colspan="2">Total</td>
-
-                            <td  id="total-display-cart"><?php echo $total ?>$</td>
-                        </tr>
-                        </tbody>
+            <div class="modal-body p-5 ">
 
 
+                                <div class="row justify-content-between">
+                                    <p>Meal</p>
+                                    <p>Price</p>
+                                </div>
 
-                </table>
+                                <div id="cart-items">
+                                    <?php
+                                    $total = 0;
+                                    foreach ($cart as $COOKIE_Meal){
+                                        $meal = $Meal->getMealById($COOKIE_Meal->id);
+                                        $totalPriceForMeal = $meal['price'] * $COOKIE_Meal->quantity;
 
-                <!--                <div class="row justify-content-between">-->
-                <!--                    <p>item</p>-->
-                <!--                    <p>quantity</p>-->
-                <!--                    <p>price</p>-->
-                <!--                </div>-->
-                <!---->
-                <!--                <div id="cart-items">-->
-                <!--                    --><?php
-                //                    $total = 0;
-                //                    foreach ($cart as $COOKIE_Meal){
-                //                        $meal = $Meal->getMealById($COOKIE_Meal->id)
-                //                        ?>
-                <!--                    <div class="row  justify-content-between">-->
-                <!--                        <p class="col-4" >--><?php //echo $meal['title'] ?><!--</p>-->
-                <!--                        <p class="col-4">--><?php //echo $COOKIE_Meal->quantity ?><!--</p>-->
-                <!--                        <p class="col-4">--><?php //echo $meal['price'] ?><!--</p>-->
-                <!--                    </div>-->
-                <!--                    --><?php //$total+= $meal['price']; } ?>
-                <!--                </div>-->
+                                        ?>
+                                    <div class="row  justify-content-between">
+                                        <p><?php echo $meal['title'] ?> x <?php echo $COOKIE_Meal->quantity ?></p>
+                                        <p><?php echo $totalPriceForMeal ?> </p>
+                                    </div>
+                                    <?php $total+= $totalPriceForMeal; } ?>
+                                </div>
 
-                <!--                <div class="row justify-content-between">-->
-                <!--                    <p>Total</p>-->
-                <!--                    <p id="total-display-cart">--><?php //echo $total ?><!--$</p>-->
-                <!--                </div>-->
+                                <div class="row justify-content-between">
+                                    <p>Total</p>
+                                    <p id="total-display-cart"><?php echo $total ?>$</p>
+                                </div>
 
 
             </div>
