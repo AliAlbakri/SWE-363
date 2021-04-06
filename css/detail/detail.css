@@ -26,10 +26,6 @@
     display:flex;
 }
 
-.flex p{
-    width:20rem;
-    text-align: left;
-}
 
 .flex div {
     width:100%;
@@ -144,7 +140,7 @@ tr:hover {
 ul .active{
     background-color: #ffaa00;
     border-radius: 10px;
-} */
+}
 
 #desc,#menu1{
     background-color: transparent !important;

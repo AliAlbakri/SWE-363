@@ -15,7 +15,7 @@ include "./include/inc.header.php";
         $meal = $Meal->getMealById($id);
 
         ?>
-        <div class="flex">
+        <div class="flex flex-column justify-content-center  flex-lg-row ">
             <img class="img" src="<?php echo "Images/".$meal['image'] ?>" alt="delivery pizza guy">
 
             <div>
@@ -23,7 +23,7 @@ include "./include/inc.header.php";
                 <p id="price"><?php echo $meal['price'] ?> SAR</p>
                 <p>⭐️ <?php echo $meal['rating'] ?>rating</p>
                 <p><?php echo $meal['description'] ?></p>
-                <div class="flex ">
+                <div class="d-flex align-items-end my-5">
                     <div class="quantity-buttons">
                         <button onclick="decrementQuantity()">-</button>
                         <button id="quantity-display">1</button>
