@@ -1,9 +1,9 @@
-table, th, td {
+/* table, th, td {
     border: 1px solid #DDD;
     border-collapse: collapse;
     height: 33px;
 
-}
+} */
 .detail-nav{
     background-color: #281923;
     opacity: 61%;
@@ -133,9 +133,16 @@ tr:hover {
     color: red;
 }
 
-/* .my-tabs{
+.my-tabs{
+    margin:  .5rem;
+    padding: 0 35px;
+    border-radius: 10px;
+}
+ .tab a{
+    text-decoration: none;
+}
+ul .active{
     background-color: #ffaa00;
-    margin: .5rem;
     border-radius: 10px;
 } */
 

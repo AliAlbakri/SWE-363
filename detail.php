@@ -17,76 +17,44 @@
 
 <body>
 
+<?php
+include "./include/inc.header.php";
+?>
 
 
-<nav style="background-color: #281923;
-    opacity: 61%;"  class=" navbar navbar-expand-lg   navbar-dark justify-content-spacebetween">
-    <a class="navbar-brand " href="#">
-        <img  src="./Images/logo-White.svg" alt="">
-    </a>
 
-    <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <i class="fas fa-bars"></i>
-    </button>
-    <div class="ml-auto collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-        <ul class="navbar-nav text-center nav-links">
-            <li class="nav-item " >
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-
-            <li class="nav-item " >
-                <a class="nav-link" href="#Menu">Menu</a></a>
-            </li>
-
-            <li class="nav-item " >
-                <a class="nav-link" href="#Gallery">Gallery</a></a>
-            </li>
-
-            <li class="nav-item " >
-                <a class="nav-link" href="#Testimonials">Testimonials</a></a>
-            </li>
-
-            <li class="nav-item " >
-                <a class="nav-link" href="#Contact">Contact Us</a></a>
-            </li>
-
-            <li class="red-link nav-item">
-                <a class="nav-link" href="#">Search</a>
-            </li>
-
-            <li class="red-link nav-item">
-                <a class="nav-link" href="#">Profile</a>
-            </li>
-
-            <li class="red-link nav-item">
-                <a class="nav-link" href="#">Cart <span id="cart-display">0</span></a>
-            </li>
-
-        </ul>
-    </div>
-</nav>
 
 <div class="container">
 
     <section id="meal-info">
+        <?php
+        $id = htmlspecialchars($_GET["id"]);
 
+        $meal = $Meal->getMealById($id);
+
+        ?>
         <div class="flex">
-            <img class="img" src="Images/meal1.png" alt="delivery pizza guy">
+            <img class="img" src="<?php echo "Images/".$meal['image'] ?>" alt="delivery pizza guy">
 
             <div>
-                <h1 class='title'>Best Sandwich</h1>
-                <p id="price">24 SAR</p>
-                <p>⭐️ 4.5 rating</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt laborum minima nobis quia.
-                    Adipisci dolor
-                    laboriosam omnis quis suscipit totam!</p>
+                <h1 class='title'><?php echo $meal['title'] ?></h1>
+                <p id="price"><?php echo $meal['price'] ?> SAR</p>
+                <p>⭐️ <?php echo $meal['rating'] ?>rating</p>
+                <p><?php echo $meal['description'] ?></p>
                 <div class="flex ">
                     <div class="quantity-buttons">
                         <button onclick="decrementQuantity()">-</button>
                         <button id="quantity-display">1</button>
                         <button onclick="incrementQuantity()">+</button>
                     </div>
-                    <input onclick="addQuantityToCart()" class="yellow-button" type="button" value="add to cart">
+                    <!-- <input onclick="addQuantityToCart()"   value="add to cart"> -->
+                    <form action="php/cart.php" method="post">
+                                <input type="hidden" name="id" value="<?php echo $meal['id'] ?>">
+
+                                <input type="submit" id="increment" class="yellow-button" onClick="increment()" value = "add to cart" >
+                                    <!-- Add to cart -->
+                                </button>
+                            </form>
                 </div>
             </div>
 
@@ -95,11 +63,9 @@
 
     <!-- <div class="container  align-items-start"></div> -->
 
-        <ul class="nav nav-pills d-flex justify-content-start ">
-
-            <li class="active p-3 m-3"><a data-toggle="pill" href="#desc"><h2  id="mydec" class="title colorCh" onclick="toggleDec()">Description</h2></a></li>
-            <li class=" m-3 p-3"><a data-toggle="pill" href="#menu1"><h2 class="title" id="rev" onclick="mufun()">Review</h2></a></li>
-  
+        <ul class="nav nav-tabs d-flex justify-content-start ">
+            <li class="active tab "><a data-toggle="tab" href="#desc"><h2 class="title   my-tabs">Description</h2></a></li>
+            <li class="tab"> <a data-toggle="tab" href="#menu1"><h2 class="title  my-tabs">Reviews</h2></a></li>
           </ul>
 
     <!-- here -->
@@ -267,12 +233,9 @@
                             <img class="img" src="Images/man-eating-burger.png" alt="man-eating-burger">
                         </div>
                         <div class="col-lg-6 col-sm-12  align-self-center">
-                            <h4>reviewer name</h4>
-                            <h5>Dhahran-Feb08,2020 ⭐️⭐️⭐️⭐️⭐️</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ad natus officiis optio excepturi
-                                dignissimos, minima quaerat, quo vitae, veritatis corrupti fugiat sed ipsam pariatur nemo harum
-                                error sunt
-                                voluptatibus!</p>
+                            <h4><?php echo $meal['reviews']["reviewer_name"] ?></h4>
+                            <h5><?php echo $meal['reviews']['city'] ?>-<?php echo $meal['reviews']["date"] ?> ⭐️⭐️⭐️⭐️⭐️</h5>
+                            <p><?php echo $meal['description'] ?></p>
                         </div>
 
                 </div>
@@ -280,7 +243,7 @@
                 <button class="yellow-button" id="addRevBtn">Add your Review</button>
 
                 <div id="formWrapper">
-                    <form  method="GET" action="detail.html" id="form" class="hide" >
+                    <form method="GET" action="detail.php" id="form" class="hide" >
 
                         <div>
                             <label for="file">Image</label>

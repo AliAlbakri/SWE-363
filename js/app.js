@@ -13,30 +13,6 @@ let totalDisplay = document.querySelector('#total-display-cart')
 
 
 
-// for index.html
-
-function incrementCart(e) {
-	let meal = e.target.name
-	let price = meals[meal].price
-
-	let cartItem = document.createElement("div")
-
-	cartItem.innerHTML = `<div class="row justify-content-between ">
-		                        <p>${meal}</p>
-		                        <p>${price}</p>
-		                  </div>`
-
-	cartItems.appendChild(cartItem);
-
-	let totalPrice  = (cartTotal + price)
-
-
-	totalDisplay.innerText= totalPrice;
-	cartDisplay.innerHTML = ++cartCount+"";
-
-	// update cart total
-	cartTotal = totalPrice;
-}
 
 // order button
 $('#cart').click(function (){
@@ -58,7 +34,7 @@ $('#cart').click(function (){
 
 
 
-// cart for detail.html
+// cart for detail.php
 
 function incrementQuantity(){
 	quantityDisplay.innerHTML = ++quantityCount+"";
@@ -79,12 +55,12 @@ function addQuantityToCart(){
 //___________________________________________________
 
 
-// ************************ detail functions******************
+// ************************ detail functions ******************
 let path = window.location.pathname;
 let page = path.split("/").pop();
 // Form Functionalities
 
-if(page==='detail.html') {
+if(page==='detail.php') {
 	let form = document.getElementById("form")
 	let msg = document.getElementById("msgForEmptyForm")
 	let customerName = document.getElementById("name")
@@ -123,6 +99,12 @@ if(page==='detail.html') {
 
 	}
 }
+
+$('ul .tab').click(function (){
+	$('ul .tab').removeClass("active")
+	$(this).addClass('active')
+
+})
 // **************************************************
 //___________________________________________________
 

@@ -48,6 +48,19 @@ nav{
     right: 10rem;
 }
 
+.navbar-custom {
+    background-color: #281923;
+    opacity: 60%;
+}
+
+#total-display-cart{
+    color: #059800;
+}
+
+.table td {
+    text-align: center;
+}
+
 
 
 ul{
