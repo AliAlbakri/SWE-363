@@ -22,6 +22,62 @@ include './include/inc.header.php'
 
 
 </header>
+
+<div class="container">
+<?php if(isset($_COOKIE["recent-bought"])){
+    $recent = json_decode($_COOKIE["recent-bought"]);
+
+    ?>
+    <Section id="recent">
+        <h2 class="title">Yor Recent Bought Meals</h2>
+
+
+
+        <div class="row justify-content-center justify-content-lg-start">
+            <?php
+            foreach ($recent as $COOKIE_Meal){
+                $meal = $Meal->getMealById($COOKIE_Meal->id);
+                ?>
+                <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
+                    <a href=" detail.php?id=<?php echo  $meal['id']  ?>">
+                        <img  src="<?php echo "Images/".$meal['image'] ?>"   class="card-img-top" alt="<?php echo $meal['title']; ?>">
+                    </a>
+
+                    <div class="mealInfo">
+                        <p class="weight200">⭐️ <?php echo $meal['rating']?> rating</p>
+                        <p> <?php echo $meal['title']  ?></p>
+                        <p class="weight200"><?php echo $meal['description']  ?></p>
+                        <div class="meal-order d-flex">
+
+                            <form action="php/cart.php" method="post">
+                                <input type="hidden" name="id" value="<?php echo $meal['id'] ?>">
+                                <input type="hidden" name="quantity" value="1">
+                                <?php
+                                $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]#Gallery";
+
+                                ?>
+                                <input type="hidden" name="back" value="<?=$actual_link?>">
+
+                                <button type="submit" id="increment" onClick="increment()">
+                                    buy Again
+                                </button>
+                            </form>
+
+                            <p class="weight200"><?php echo $meal['price'] ?> SAR</p></div>
+                    </div>
+
+
+                </div>
+            <?php } ?>
+
+        </div>
+
+
+    </Section>
+<?php } ?>
+
+</div>
+
 <Section id="Menu">
     <h2 class="title">Want to Eat</h2>
     <p>Try out most delicious food and usually take minutes to deliver</p>
@@ -82,10 +138,16 @@ include './include/inc.header.php'
                         <p class="weight200">⭐️ <?php echo $meal['rating']?> rating</p>
                         <p> <?php echo $meal['title']  ?></p>
                         <p class="weight200"><?php echo $meal['description']  ?></p>
-                        <div class="meal-order">
+                        <div class="meal-order d-flex">
 
                             <form action="php/cart.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $meal['id'] ?>">
+                                <input type="hidden" name="quantity" value="1">
+                                <?php
+                                $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]#Gallery";
+
+                                ?>
+                                <input type="hidden" name="back" value="<?=$actual_link?>">
 
                                 <button type="submit" id="increment" onClick="increment()">
                                     Add to cart

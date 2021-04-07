@@ -37,14 +37,14 @@ $('#cart').click(function (){
 // cart for detail.php
 
 function incrementQuantity(){
-	quantityDisplay.innerHTML = ++quantityCount+"";
+	quantityDisplay.value= ++quantityCount;
 }
 
 function decrementQuantity() {
 	if (quantityCount ===1)
 		return
 
-	quantityDisplay.innerHTML= --quantityCount+""
+	quantityDisplay.value= --quantityCount+""
 }
 
 function addQuantityToCart(){

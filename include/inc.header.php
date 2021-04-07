@@ -42,19 +42,19 @@ $Meal = new Meal();
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#Menu">Menu</a></a>
+                <a class="nav-link" href="index.php#Menu">Menu</a></a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#Gallery">Gallery</a></a>
+                <a class="nav-link" href="index.php#Gallery">Gallery</a></a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#Testimonials">Testimonials</a></a>
+                <a class="nav-link" href="index.php#Testimonials">Testimonials</a></a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#Contact">Contact Us</a></a>
+                <a class="nav-link" href="index.php#Contact">Contact Us</a></a>
             </li>
 
             <li class="red-link nav-item">
@@ -120,9 +120,16 @@ $Meal = new Meal();
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
                 <!-- <button id="order-now" type="button" class="btn  btn-warning">Order now</button> -->
+                <?php
+                $actual_link = "http://$_SERVER[HTTP_HOST]";
 
+                ?>
                 <form action="php/order.php" method="post">
-                <input id="order-now" type="submit" class="btn  btn-warning" value="Order now">
+                    <input type="hidden" name="total" value="<?= $total ?>">
+                    <input type="hidden" name="meals" value="<? $_COOKIE['cart'] ?>">
+                    <input type="hidden" name="redirect" value="<?= $actual_link ?>">
+
+                    <input id="order-now" type="submit" class="btn  btn-warning" value="Order now">
 
 
                 </form>

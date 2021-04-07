@@ -36,6 +36,7 @@
 }
 
 .quantity-buttons >*{
+    width: 3rem;
     background-color: transparent;
     border: #ffaa00 2px solid;
     color:#8a0a0a;
