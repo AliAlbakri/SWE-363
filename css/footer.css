@@ -41,6 +41,7 @@ footer .title {
     width:20%;
 }
 
+
 /*tablet screens*/
 @media only screen and (min-device-width: 500px) and (max-device-width: 1024px) {
 
@@ -76,6 +77,4 @@ footer .title {
     footer {
         display: block;
     }
-
-
  }
