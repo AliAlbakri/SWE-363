@@ -66,6 +66,10 @@ header .title{
     position: inherit;
 }
 
+.hideME{
+    display: none;
+}
+
 
 @media all and (max-width: 990px) {
 

@@ -23,8 +23,10 @@
 
 <header>
     <?php
-    include './include/inc.header.php'
+    include './include/inc.header.php';
+   
     ?>
+
 
     <div class="container landing">
         <p class="mb-5"></p>
@@ -43,6 +45,16 @@
 
 
 </header>
+
+<?php
+if(isset($_COOKIE["recent"])){
+    include './include/inc.rec.php';
+}
+    ?>
+
+
+
+
 <Section id="Menu">
     <h2 class="title">Want to Eat</h2>
     <p>Try out most delicious food and usually take minutes to deliver</p>
@@ -81,6 +93,7 @@
 
 
 <div class="container">
+
 
     <Section id="Gallery">
         <h2 class="title">Our most popular recipes</h2>
@@ -177,6 +190,9 @@
         </div>
 
     </Section>
+
+
+    
 
 </div>
 
