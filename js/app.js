@@ -37,14 +37,14 @@ $('#cart').click(function (){
 // cart for detail.php
 
 function incrementQuantity(){
-	quantityDisplay.innerHTML = ++quantityCount+"";
+	quantityDisplay.value= ++quantityCount;
 }
 
 function decrementQuantity() {
 	if (quantityCount ===1)
 		return
 
-	quantityDisplay.innerHTML= --quantityCount+""
+	quantityDisplay.value= --quantityCount+""
 }
 
 function addQuantityToCart(){
@@ -132,3 +132,18 @@ let meals = {
 	},
 
 }
+
+let myreview = document.getElementById("rev")
+let mydec = document.getElementById("mydec")
+function mufun(){
+
+	myreview.classList.add("colorCh")
+	mydec.classList.remove("colorCh")
+}
+
+function toggleDec(){
+	myreview.classList.remove("colorCh")
+	mydec.classList.add("colorCh")
+}
+
+

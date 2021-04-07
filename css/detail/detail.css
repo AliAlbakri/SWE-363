@@ -1,9 +1,9 @@
-table, th, td {
-    /*border: 1px solid #DDD;*/
-    /*border-collapse: collapse;*/
-    /*height: 33px;*/
+/* table, th, td {
+    border: 1px solid #DDD;
+    border-collapse: collapse;
+    height: 33px;
 
-}
+} */
 .detail-nav{
     background-color: #281923;
     opacity: 61%;
@@ -26,10 +26,6 @@ table, th, td {
     display:flex;
 }
 
-.flex p{
-    width:20rem;
-    text-align: left;
-}
 
 .flex div {
     width:100%;
@@ -40,6 +36,7 @@ table, th, td {
 }
 
 .quantity-buttons >*{
+    width: 3rem;
     background-color: transparent;
     border: #ffaa00 2px solid;
     color:#8a0a0a;
@@ -144,4 +141,8 @@ tr:hover {
 ul .active{
     background-color: #ffaa00;
     border-radius: 10px;
+}
+
+#desc,#menu1{
+    background-color: transparent !important;
 }
