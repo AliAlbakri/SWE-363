@@ -33,21 +33,21 @@ include './include/inc.header.php'
 
 
 
-        <div class="row justify-content-center justify-content-lg-start">
+        <div class="row justify-content-center ">
             <?php
             foreach ($recent as $COOKIE_Meal){
                 $meal = $Meal->getMealById($COOKIE_Meal->id);
                 ?>
-                <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
+                <div class="card p-0 my-2 col-lg-3 col-md-4 col-11">
                     <a href=" detail.php?id=<?php echo  $meal['id']  ?>">
                         <img  src="<?php echo "Images/".$meal['image'] ?>"   class="card-img-top" alt="<?php echo $meal['title']; ?>">
                     </a>
 
-                    <div class="mealInfo">
+                    <div class="mealInfo ">
                         <p class="weight200">⭐️ <?php echo $meal['rating']?> rating</p>
                         <p> <?php echo $meal['title']  ?></p>
                         <p class="weight200"><?php echo $meal['description']  ?></p>
-                        <div class="meal-order d-flex">
+                        <div class="meal-order d-flex justify-content-between">
 
                             <form action="php/cart.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $meal['id'] ?>">
@@ -63,7 +63,7 @@ include './include/inc.header.php'
                                 </button>
                             </form>
 
-                            <p class="weight200"><?php echo $meal['price'] ?> SAR</p></div>
+                            <p ><?php echo $meal['price'] ?> SAR</p></div>
                     </div>
 
 
@@ -119,17 +119,18 @@ include './include/inc.header.php'
 
     <Section id="Gallery">
         <h2 class="title">Our most popular recipes</h2>
-        <p>Try out most delicious food and usually take minutes to deliver</p>
+        <p class="text-center">Try out most delicious food and usually take minutes to deliver</p>
 
 
 
-        <div class="row justify-content-center justify-content-lg-start">
+        <div class="row justify-content-center ">
             <?php
 
             $meals = $Meal->getAllMeals();
 
             foreach ($meals as $meal) { ?>
-            <div class="card mx-0 my-2 col-lg-3 col-md-4 col-11">
+            <div class="card p-0   my-2 col-lg-2 col-md-4 col-11">
+
                 <a href=" detail.php?id=<?php echo  $meal['id']  ?>">
                     <img  src="<?php echo "Images/".$meal['image'] ?>"   class="card-img-top" alt="<?php echo $meal['title']; ?>">
                 </a>
@@ -138,7 +139,7 @@ include './include/inc.header.php'
                         <p class="weight200">⭐️ <?php echo $meal['rating']?> rating</p>
                         <p> <?php echo $meal['title']  ?></p>
                         <p class="weight200"><?php echo $meal['description']  ?></p>
-                        <div class="meal-order d-flex">
+                        <div class="meal-order d-flex justify-content-between ">
 
                             <form action="php/cart.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $meal['id'] ?>">
@@ -153,8 +154,8 @@ include './include/inc.header.php'
                                     Add to cart
                                 </button>
                             </form>
-                            
-                            <p class="weight200"><?php echo $meal['price'] ?> SAR</p></div>
+
+                            <p ><?php echo $meal['price'] ?> SAR</p></div>
                     </div>
 
 

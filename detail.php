@@ -27,7 +27,7 @@ include "./include/inc.header.php";
                     $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
                     ?>
-                    <form action="php/cart.php" method="post">
+                    <form class="d-flex w-100" action="php/cart.php" method="post">
                     <div class="quantity-buttons">
                         <button type="button" onclick="decrementQuantity()">-</button>
                         <input type="text"  name="quantity" id="quantity-display" value="1" >
