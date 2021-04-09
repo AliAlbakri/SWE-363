@@ -146,4 +146,26 @@ function toggleDec(){
 	mydec.classList.add("colorCh")
 }
 
+//navbar links active state
+document.addEventListener('DOMContentLoaded', function() {
+	let links = document.querySelectorAll('.nav-link')
+
+	window.addEventListener("scroll", function (event){
+		let windowDistance = window.scrollY +160
+		links.forEach(link=>{
+			let section = document.querySelector(link.getAttribute("href"))
+			if (section) {
+				console.log(section)
+				let sectionBottom = section.offsetTop + section.offsetHeight
+				let sectionTop = section.offsetTop
+				// handle classes based on viewport
+				if (windowDistance >= sectionTop && sectionBottom >= windowDistance) {
+					link.classList.add("Active")
+				} else {
+					link.classList.remove("Active")
+				}
+			}
+		})
+	})
+});
 

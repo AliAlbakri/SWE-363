@@ -48,9 +48,14 @@ nav{
     right: 10rem;
 }
 
+.Active{
+    /*border-bottom:  #ffaa00 5px solid !important;*/
+    color: #ffaa00 !important ;
+    opacity: 100% !important;
+}
+
 .navbar-custom {
     background-color: #281923;
-    opacity: 60%;
 }
 
 #total-display-cart{
@@ -93,8 +98,6 @@ nav img{
     font-weight: bold;
     color: #dedede;
     text-decoration: none;
-    border-right: rgba(0,0,0,.5) 1px solid;
-    transition: all 0.75s;
 }
 
 .nav-links a:hover{
@@ -147,7 +150,7 @@ section .title {
 
 
 section{
-    margin-top: 3rem;
+    margin-top: 10rem;
 }
 
 .icon{

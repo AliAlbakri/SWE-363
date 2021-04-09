@@ -27,8 +27,8 @@ $Meal = new Meal();
 <body>
 
 
-<nav class="navbar navbar-expand-lg  navbar-custom  navbar-dark justify-content-spacebetween">
-    <a class="navbar-brand " href="#">
+<nav class="navbar navbar-expand-lg p-0 navbar-custom  navbar-dark justify-content-spacebetween">
+    <a class="navbar-brand " href="#home">
         <img src="./Images/logo-White.svg" alt="">
     </a>
 
@@ -38,23 +38,23 @@ $Meal = new Meal();
     <div class="ml-auto collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
         <ul class="navbar-nav text-center nav-links">
             <li class="nav-item ">
-                <a class="nav-link" href="index.php">Home</a>
+                <a class="nav-link" href="#Home">Home</a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="index.php#Menu">Menu</a></a>
+                <a class="nav-link" href="#Menu">Menu</a></a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="index.php#Gallery">Gallery</a></a>
+                <a class="nav-link" href="#Gallery">Gallery</a></a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="index.php#Testimonials">Testimonials</a></a>
+                <a class="nav-link" href="#Testimonials">Testimonials</a></a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="index.php#Contact">Contact Us</a></a>
+                <a class="nav-link" href="#Contact">Contact Us</a></a>
             </li>
 
             <li class="red-link nav-item">

@@ -2,7 +2,7 @@
 <?php
 include './include/inc.header.php'
 ?>
-<header>
+<header id="Home">
 
 
     <div class="container landing">
