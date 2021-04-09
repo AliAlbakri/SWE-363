@@ -285,7 +285,7 @@ class meal
         ),
         array(
             "id" => 5,
-            "title" => "Chicken Burger",
+            "title" => "Beef Burger",
             "price" => 19.4,
             "rating" => 4.8,
             "image" => "meal5.png",
