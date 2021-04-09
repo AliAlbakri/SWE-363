@@ -44,8 +44,10 @@ include './include/inc.header.php'
                     </a>
 
                     <div class="mealInfo ">
-                        <p class="weight200">⭐️ <?php echo $meal['rating']?> rating</p>
-                        <p> <?php echo $meal['title']  ?></p>
+                        <div class="d-flex justify-content-between">
+                            <p> <?php echo $meal['title'] ?></p>
+                            <p class="weight200">⭐️ <?php echo $meal['rating'] ?> rating</p>
+                        </div>
                         <p class="weight200"><?php echo $meal['description']  ?></p>
                         <div class="meal-order d-flex justify-content-between">
 
@@ -136,8 +138,12 @@ include './include/inc.header.php'
                 </a>
 
                     <div class="mealInfo">
-                        <p class="weight200">⭐️ <?php echo $meal['rating']?> rating</p>
-                        <p> <?php echo $meal['title']  ?></p>
+
+                        <div class="d-flex justify-content-between">
+                            <p> <?php echo $meal['title'] ?></p>
+                            <p class="weight200">⭐️ <?php echo $meal['rating'] ?> rating</p>
+                        </div>
+                       
                         <p class="weight200"><?php echo $meal['description']  ?></p>
                         <div class="meal-order d-flex justify-content-between ">
 

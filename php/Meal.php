@@ -6,7 +6,7 @@ class meal
     private $meals = array(
         array(
             "id" => 1,
-            "title" => "Best Sandwich",
+            "title" => "Black Burger",
             "price" => 23.9,
             "rating" => 4.5,
             "image" => "meal1.png",
@@ -145,7 +145,7 @@ class meal
         ),
         array(
             "id" => 3,
-            "title" => "Burger Meal",
+            "title" => "Burger Sliders",
             "price" => 27.5,
             "rating" => 4.7,
             "image" => "meal3.png",

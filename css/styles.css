@@ -51,7 +51,9 @@ nav{
 .Active{
     /*border-bottom:  #ffaa00 5px solid !important;*/
     color: #ffaa00 !important ;
-    opacity: 100% !important;
+    text-shadow: 0 0 0.17em #ffaa00 ;
+    font-size: 1.2em;
+    transition: all ease-in-out .2s
 }
 
 .navbar-custom {
@@ -94,17 +96,18 @@ nav img{
 .nav-links a{
     padding: 15px 15px;
     background-color: #281923;
-    opacity: 60%;
     font-weight: bold;
     color: #dedede;
     text-decoration: none;
+    transition: all ease-in-out .2s
+
 }
 
 .nav-links a:hover{
-    background-color: rgba(0,0,0,.8) ;
-    opacity: 100%;
-    color: white;
-    border-right: rgba(0,0,0,.5) 1px solid;
+    color: #ffaa00 !important ;
+    text-shadow: 0 0 0.17em #ffaa00 ;
+    opacity: 100% !important;
+    transition: all ease-in-out .2s
 }
 
 .nav-links .red-link a{

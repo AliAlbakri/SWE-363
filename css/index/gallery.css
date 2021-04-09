@@ -1,47 +1,66 @@
 
-
-.card{
+.card {
     border-radius: 10px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
     min-width: 304px;
     margin: 20px 0.5rem;
 }
 
-.card ul{
+.card ul {
     margin-left: 20px;
 }
 
-.card ul li{
+.card ul li {
     margin-top: 5px;
 }
 
-.mealInfo{
+.mealInfo {
     padding: 20px;
 }
-.mealInfo >*{
+
+.mealInfo > * {
     margin-top: 20px;
 }
-.mealInfo p{
+
+.mealInfo p {
     width: fit-content;
 }
 
-.meal-order p{
+.card-img-top {
+    height: 220px;
+}
+
+.card {
+    border: none;
+    transition: all ease 0.5s;
+
+}
+
+.card:hover {
+    box-shadow: 1px 10px 29px 0 rgba(53, 50, 50, 0.67);
+    transition: all ease 0.5s;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+
+.meal-order p {
     display: inline;
 }
 
-.meal-order button{
-    padding:2px 7px;
+.meal-order button {
+    padding: 2px 7px;
     background-color: #ffaa00;
     border: none;
     border-radius: 50px;
 }
 
-.meal-order button:hover{
+.meal-order button:hover {
     cursor: pointer;
     background-color: #FFDD00;
 }
 
-.weight200{
+.weight200 {
     font-weight: 200;
     white-space: nowrap;
     overflow: hidden;
