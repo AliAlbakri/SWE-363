@@ -38,23 +38,23 @@ $Meal = new Meal();
     <div class="ml-auto collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
         <ul class="navbar-nav text-center nav-links">
             <li class="nav-item ">
-                <a class="nav-link" href="#Home">Home</a>
+                <a class="nav-link" name="Home"  href="index.php#Home">Home</a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#Menu">Menu</a></a>
+                <a class="nav-link" name="Menu" href="index.php#Menu">Menu</a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#Gallery">Gallery</a></a>
+                <a class="nav-link" name="Gallery" href="index.php#Gallery">Gallery</a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#Testimonials">Testimonials</a></a>
+                <a class="nav-link" name="Testimonials" href="index.php#Testimonials">Testimonials</a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#Contact">Contact Us</a></a>
+                <a class="nav-link" name="Contact" href="#Contact">Contact Us</a>
             </li>
 
             <li class="red-link nav-item">

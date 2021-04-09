@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	window.addEventListener("scroll", function (event){
 		let windowDistance = window.scrollY +160
 		links.forEach(link=>{
-			let section = document.querySelector(link.getAttribute("href"))
+			let section = document.getElementById(link.getAttribute("name"))
 			if (section) {
 				console.log(section)
 				let sectionBottom = section.offsetTop + section.offsetHeight
