@@ -20,6 +20,7 @@ body{
     font-family: Montserrat, sans-serif;
     font-weight: bolder;
     min-width: fit-content;
+    overflow-x: hidden;
 }
 
 html, body {

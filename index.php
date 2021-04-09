@@ -7,9 +7,11 @@ include './include/inc.header.php'
 
     <div class="container landing">
         <p class="mb-5"></p>
-        <h1 class="title mt-5">Party Time</h1>
+        <h1 data-aos="fade-right" data-aos-delay="50"
+            data-aos-duration="1000" class="title mt-5">Party Time</h1>
 
-        <div class="offer">
+        <div data-aos="fade-right" data-aos-delay="50"
+             data-aos-duration="1000" class="offer">
             <div class="shape">
                 <div class="shape-text">
                     Buy any 2 burgers and get 1.5L Pepsi Free
@@ -17,7 +19,8 @@ include './include/inc.header.php'
             </div>
         </div>
 
-        <button id='order'>Order Now</button>
+        <button data-aos="fade-up-right" data-aos-once="true" data-aos-delay="50"
+                data-aos-duration="1000"  id='order'>Order Now</button>
     </div>
 
 
@@ -38,7 +41,8 @@ include './include/inc.header.php'
             foreach ($recent as $COOKIE_Meal){
                 $meal = $Meal->getMealById($COOKIE_Meal->id);
                 ?>
-                <div class="card p-0 my-2 col-lg-3 col-md-4 col-11">
+                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="50"
+                     data-aos-duration="1000" class="card p-0 my-2 col-lg-3 col-md-4 col-11">
                     <a href=" detail.php?id=<?php echo  $meal['id']  ?>">
                         <img  src="<?php echo "Images/".$meal['image'] ?>"   class="card-img-top" alt="<?php echo $meal['title']; ?>">
                     </a>
@@ -86,22 +90,30 @@ include './include/inc.header.php'
 
 
     <div class="menu-links row container mx-auto">
-        <a class="col my-0 mx-1 p-1" href="">burger</a>
-        <a class="col my-0 mx-1 p-1" href="">pizza</a>
-        <a class="col my-0 mx-1 p-1" href="">fast food</a>
-        <a class="col my-0 mx-1 p-1" href="">cupcake</a>
-        <a class="col my-0 mx-1 p-1" href="">sandwich</a>
-        <a class="col my-0 mx-1 p-1" href="">spaghetti</a>
+        <a  data-aos="zoom-in" data-aos-once="true" data-aos-delay="50"
+            data-aos-duration="1000" class="col my-0 mx-1 p-1" href="">burger</a>
+        <a data-aos="zoom-in" data-aos-once="true" data-aos-delay="250"
+            data-aos-duration="1000" class="col my-0 mx-1 p-1" href="">pizza</a>
+        <a data-aos="zoom-in" data-aos-once="true" data-aos-delay="450"
+            data-aos-duration="1000" class="col my-0 mx-1 p-1" href="">fast food</a>
+        <a data-aos="zoom-in" data-aos-once="true" data-aos-delay="650"
+            data-aos-duration="1000" class="col my-0 mx-1 p-1" href="">cupcake</a>
+        <a data-aos="zoom-in" data-aos-once="true" data-aos-delay="850"
+            data-aos-duration="1000" class="col my-0 mx-1 p-1" href="">sandwich</a>
+        <a data-aos="zoom-in" data-aos-once="true" data-aos-delay="1050"
+            data-aos-duration="1000" class="col my-0 mx-1 p-1" href="">spaghetti</a>
     </div>
 
 
     <div class="image-background">
 
 
-        <img class="w-100" src="Images/delivery.png" alt="delivery pizza guy" id="pizza-guy">
+        <img data-aos="fade-down-right" data-aos-once="true" data-aos-delay="50"
+             data-aos-duration="1500" class="w-100" src="Images/delivery.png" alt="delivery pizza guy" id="pizza-guy">
 
 
-        <div>
+        <div data-aos="fade-down-left" data-aos-once="true" data-aos-delay="50"
+             data-aos-duration="1500">
             <div class="Tshape">
                 <div class="Tshape-text">
                     <h2><strong>guarantee 30 minutes delivery</strong></h2>
@@ -130,8 +142,10 @@ include './include/inc.header.php'
 
             $meals = $Meal->getAllMeals();
 
-            foreach ($meals as $meal) { ?>
-            <div class="card p-0   my-2 col-lg-2 col-md-4 col-11">
+            foreach ($meals as $key=>$meal) { ?>
+            <div data-aos="zoom-in-down"
+                 data-aos-anchor-placement="center-bottom"  data-aos-once="true" data-aos-delay="<?php echo 100*$key ?>"
+                 data-aos-duration="1500" class="card p-0   my-2 col-lg-2 col-md-4 col-11">
 
                 <a href=" detail.php?id=<?php echo  $meal['id']  ?>">
                     <img  src="<?php echo "Images/".$meal['image'] ?>"   class="card-img-top" alt="<?php echo $meal['title']; ?>">
