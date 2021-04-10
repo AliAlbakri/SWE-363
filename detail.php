@@ -1,6 +1,8 @@
 <?php
 include "./include/inc.header.php";
+$id = htmlspecialchars($_GET["id"]);
 
+$meal = $Meal->getMealById($id);
 
 ?>
 
@@ -82,12 +84,12 @@ include "./include/inc.header.php";
 
                         <tr class="row-coloring">
 
-                            <td colspan="3"><strong>Serving Size:</strong> 1 Cookie (57g)</td>
+                            <td colspan="3"><strong>Serving Size:</strong> <?php echo $meal['nutrition']["serving_size"]?></td>
 
                         </tr>
 
                         <tr>
-                            <td colspan="3"><strong>Serving Per Container:</strong> 12</td>
+                            <td colspan="3"><strong>Serving Per Container:</strong> <?php echo $meal['nutrition']["serving_per_container"]?></td>
                         </tr>
 
 
@@ -99,7 +101,7 @@ include "./include/inc.header.php";
 
                         <tr>
                             <td>Calories</td>
-                            <td>200</td>
+                            <td><?php echo $meal['nutrition']["facts"][0]["amount_per_serving"] ?></td>
                             <td></td>
                         </tr>
                         <tr class="row-coloring">

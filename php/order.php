@@ -9,4 +9,4 @@ if(isset($_COOKIE["cart"])){
     setcookie('cart','',time()-3600,'/');
 }
 
- header('Location: ' .$redirect);
+ header('Location: ../index.php');
